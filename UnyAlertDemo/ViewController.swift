@@ -14,17 +14,10 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.view.backgroundColor = UIColor.whiteColor()
+        self.view.backgroundColor = UIColor(white: 0.2, alpha: 1.0)
         
-        let button = UIButton(frame: CGRect(x: 0.0, y: 0.0, width: 200.0, height: 90.0))
-        button.titleLabel?.text = "TAP ME!"
-        button.addTarget(self, action: "didTap", forControlEvents: .TouchUpInside)
-        self.view.addSubview(button)
-    }
-    
-    func didTap() {
-        let vc = UnyAlert.showSuccess()
-        self.presentViewController(vc, animated: true, completion: nil)
+        let view = UnyAlert.showSuccess()
+        self.view.addSubview(view)
     }
 
     override func didReceiveMemoryWarning() {

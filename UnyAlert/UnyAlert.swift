@@ -9,7 +9,9 @@
 // TODO: 必要なかったら消す
 import UIKit
 
-public func showSuccess() -> UIViewController {
-    let viewController = AlertViewController()
-    return viewController
+/// 1つのビューを使い回し
+let alertView = AlertView()
+
+public func showSuccess() -> UIView {
+    return IconView(type: .Checkmark)
 }

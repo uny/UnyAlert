@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AA2882371A51E36C00BBD6F4 /* IconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2882361A51E36C00BBD6F4 /* IconView.swift */; };
 		AA3441BB1A518BDA00875178 /* UnyAlert.h in Headers */ = {isa = PBXBuildFile; fileRef = AA3441BA1A518BDA00875178 /* UnyAlert.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AA3441C11A518BDB00875178 /* UnyAlert.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA3441B51A518BDA00875178 /* UnyAlert.framework */; };
 		AA3441C81A518BDB00875178 /* UnyAlertTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3441C71A518BDB00875178 /* UnyAlertTests.swift */; };
-		AA3441D21A518D8800875178 /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3441D11A518D8800875178 /* AlertViewController.swift */; };
 		AA3441DC1A51935600875178 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3441DB1A51935600875178 /* AppDelegate.swift */; };
 		AA3441DE1A51935600875178 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3441DD1A51935600875178 /* ViewController.swift */; };
 		AA3441E31A51935600875178 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA3441E21A51935600875178 /* Images.xcassets */; };
@@ -60,13 +60,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		AA2882361A51E36C00BBD6F4 /* IconView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconView.swift; sourceTree = "<group>"; };
 		AA3441B51A518BDA00875178 /* UnyAlert.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UnyAlert.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA3441B91A518BDA00875178 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AA3441BA1A518BDA00875178 /* UnyAlert.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UnyAlert.h; sourceTree = "<group>"; };
 		AA3441C01A518BDB00875178 /* UnyAlertTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnyAlertTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA3441C61A518BDB00875178 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AA3441C71A518BDB00875178 /* UnyAlertTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnyAlertTests.swift; sourceTree = "<group>"; };
-		AA3441D11A518D8800875178 /* AlertViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
 		AA3441D71A51935600875178 /* UnyAlertDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UnyAlertDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA3441DA1A51935600875178 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AA3441DB1A51935600875178 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -140,9 +140,9 @@
 			children = (
 				AA3441BA1A518BDA00875178 /* UnyAlert.h */,
 				AA3441B81A518BDA00875178 /* Supporting Files */,
-				AA3441D11A518D8800875178 /* AlertViewController.swift */,
 				AA3441F91A5194E400875178 /* UnyAlert.swift */,
 				AA3442021A51A61300875178 /* AlertView.swift */,
+				AA2882361A51E36C00BBD6F4 /* IconView.swift */,
 			);
 			path = UnyAlert;
 			sourceTree = "<group>";
@@ -379,7 +379,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AA3441D21A518D8800875178 /* AlertViewController.swift in Sources */,
+				AA2882371A51E36C00BBD6F4 /* IconView.swift in Sources */,
 				AA3441FA1A5194E400875178 /* UnyAlert.swift in Sources */,
 				AA3442031A51A61300875178 /* AlertView.swift in Sources */,
 			);
@@ -671,6 +671,7 @@
 				AA3441CD1A518BDB00875178 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AA3441CE1A518BDB00875178 /* Build configuration list for PBXNativeTarget "UnyAlertTests" */ = {
 			isa = XCConfigurationList;
@@ -679,6 +680,7 @@
 				AA3441D01A518BDB00875178 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AA3441F31A51935600875178 /* Build configuration list for PBXNativeTarget "UnyAlertDemo" */ = {
 			isa = XCConfigurationList;
@@ -687,6 +689,7 @@
 				AA3441F51A51935600875178 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AA3441F61A51935600875178 /* Build configuration list for PBXNativeTarget "UnyAlertDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -695,6 +698,7 @@
 				AA3441F81A51935600875178 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
