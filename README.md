@@ -15,15 +15,15 @@ UnyAlert
 アイコンをcontentViewの中に
 -------------------
 
-![](<https://raw.githubusercontent.com/ynagai/UnyAlert/master/UnyAlertDemo/Success.png>)
+![Success](<https://raw.githubusercontent.com/ynagai/UnyAlert/master/UnyAlertDemo/Success.png>)
 
-![](<https://raw.githubusercontent.com/ynagai/UnyAlert/master/UnyAlertDemo/Error.png>)
+![Error](<https://raw.githubusercontent.com/ynagai/UnyAlert/master/UnyAlertDemo/Error.png>)
 
-![](<https://raw.githubusercontent.com/ynagai/UnyAlert/master/UnyAlertDemo/Warning.png>)
+![Warning](<https://raw.githubusercontent.com/ynagai/UnyAlert/master/UnyAlertDemo/Warning.png>)
 
-![](<https://raw.githubusercontent.com/ynagai/UnyAlert/master/UnyAlertDemo/Info.png>)
+![Info](<https://raw.githubusercontent.com/ynagai/UnyAlert/master/UnyAlertDemo/Info.png>)
 
-![](<https://raw.githubusercontent.com/ynagai/UnyAlert/master/UnyAlertDemo/Loading.png>)
+![Loading](<https://raw.githubusercontent.com/ynagai/UnyAlert/master/UnyAlertDemo/Loading.png>)
 
 フォントなどを変更できるように
 ---------------
