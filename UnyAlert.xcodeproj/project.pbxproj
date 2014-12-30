@@ -16,7 +16,6 @@
 		AA3441E31A51935600875178 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA3441E21A51935600875178 /* Images.xcassets */; };
 		AA3441E61A51935600875178 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA3441E41A51935600875178 /* LaunchScreen.xib */; };
 		AA3441F21A51935600875178 /* UnyAlertDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3441F11A51935600875178 /* UnyAlertDemoTests.swift */; };
-		AA3441FA1A5194E400875178 /* UnyAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3441F91A5194E400875178 /* UnyAlert.swift */; };
 		AA3441FE1A51954A00875178 /* UnyAlert.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = AA3441B51A518BDA00875178 /* UnyAlert.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		AA3442031A51A61300875178 /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3442021A51A61300875178 /* AlertView.swift */; };
 /* End PBXBuildFile section */
@@ -76,7 +75,6 @@
 		AA3441EB1A51935600875178 /* UnyAlertDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnyAlertDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA3441F01A51935600875178 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AA3441F11A51935600875178 /* UnyAlertDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnyAlertDemoTests.swift; sourceTree = "<group>"; };
-		AA3441F91A5194E400875178 /* UnyAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnyAlert.swift; sourceTree = "<group>"; };
 		AA3442021A51A61300875178 /* AlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -140,7 +138,6 @@
 			children = (
 				AA3441BA1A518BDA00875178 /* UnyAlert.h */,
 				AA3441B81A518BDA00875178 /* Supporting Files */,
-				AA3441F91A5194E400875178 /* UnyAlert.swift */,
 				AA3442021A51A61300875178 /* AlertView.swift */,
 				AA083D7C1A51F57C006F65A2 /* IconFactory.swift */,
 			);
@@ -380,7 +377,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA083D7D1A51F57C006F65A2 /* IconFactory.swift in Sources */,
-				AA3441FA1A5194E400875178 /* UnyAlert.swift in Sources */,
 				AA3442031A51A61300875178 /* AlertView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

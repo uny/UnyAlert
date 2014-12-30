@@ -32,6 +32,9 @@ class ViewController: UIViewController {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         
+        // Appearance対応
+        UnyAlert.AlertView.appearance().cornerRadius = 3.0
+        
         let width = CGRectGetWidth(self.view.frame)
         let height = CGRectGetHeight(self.view.frame)
         self.successButton.center = CGPoint(x: floor(width / 4), y: floor(height / 4))
