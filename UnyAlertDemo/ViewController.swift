@@ -69,6 +69,7 @@ class ViewController: UIViewController {
         var buttons = [UIButton]()
         let firstButton = UIButton()
         firstButton.setTitle("First", forState: .Normal)
+        firstButton.addTarget(self, action: "didTap:", forControlEvents: .TouchUpInside)
         buttons.append(firstButton)
         let secondButton = UIButton()
         secondButton.setTitle("Second", forState: .Normal)
@@ -77,18 +78,43 @@ class ViewController: UIViewController {
         thirdButton.setTitle("Third", forState: .Normal)
         buttons.append(thirdButton)
         alertView.buttons = buttons
-        alertView.showSuccess(title: "成功したよ！", message: "成功やったね成功やったね成功やったね成功やったね", duration: 3.0)
+        alertView.showSuccess(title: "成功したよ！", message: "成功やったね成功やったね成功やったね成功やったね")
     }
     func error() {
-        
+        let alertView = UnyAlert.AlertView()
+        let button = UIButton()
+        button.setTitle("OK", forState: .Normal)
+        alertView.buttons = [button]
+        alertView.showError(title: "エラー", message: "どうにかして直してください")
     }
     func warning() {
-        
+        let alertView = UnyAlert.AlertView()
+        alertView.showWarning(title: "警告", duration: 1.0)
     }
     func info() {
-        
+        let alertView = UnyAlert.AlertView()
+        let textField = UITextField()
+        textField.placeholder = "First"
+        alertView.textFields = [textField]
+        let button = UIButton()
+        button.setTitle("登録？", forState: .Normal)
+        alertView.buttons = [button]
+        alertView.showWarning(title: "ちょっとちょっと", message: "何かを入力してください")
     }
     func loading() {
-        
+        let alertView = UnyAlert.AlertView()
+        alertView.showLoading(title: "通信中？", message: "いえええええい")
+        NSTimer.scheduledTimerWithTimeInterval(3.0,
+            target: self, selector: "timeup:", userInfo: ["alertView": alertView], repeats: false)
+    }
+    
+    // MARK - Button events
+    func didTap(sender: UIButton) {
+        println("Tapped by \(sender)")
+    }
+    // MARK - Timer events
+    func timeup(timer: NSTimer) {
+        let alertView = timer.userInfo!["alertView"] as UnyAlert.AlertView
+        alertView.close()
     }
 }

@@ -72,8 +72,12 @@ public class AlertView: UIView {
     public dynamic var messageFontSize: CGFloat = 14.0
     /// テキストフィールド高さ
     public dynamic var textFieldHeight: CGFloat = 30.0
+    /// テキストフィールドフォントサイズ
+    public dynamic var textFieldFontSize: CGFloat = 14.0
     /// ボタン高さ
     public dynamic var buttonHeight: CGFloat = 35.0
+    /// ボタンフォントサイズ
+    public dynamic var buttonFontSize: CGFloat = 14.0
     /// テキストフィールドたち：直接足してね
     public var textFields = [UITextField]()
     /// ボタンたち：targetなしならclose
@@ -87,6 +91,30 @@ public class AlertView: UIView {
     */
     public func showSuccess(#title: String, message: String = "", duration: NSTimeInterval? = nil) {
         self.show(title: title, message: message, duration: duration, type: .Success)
+    }
+    /**
+    エラー通知
+    */
+    public func showError(#title: String, message: String = "", duration: NSTimeInterval? = nil) {
+        self.show(title: title, message: message, duration: duration, type: .Error)
+    }
+    /**
+    警告通知
+    */
+    public func showWarning(#title: String, message: String = "", duration: NSTimeInterval? = nil) {
+        self.show(title: title, message: message, duration: duration, type: .Warning)
+    }
+    /**
+    情報通知
+    */
+    public func showInfo(#title: String, message: String = "", duration: NSTimeInterval? = nil) {
+        self.show(title: title, message: message, duration: duration, type: .Info)
+    }
+    /**
+    ぐるぐる
+    */
+    public func showLoading(#title: String, message: String = "", duration: NSTimeInterval? = nil) {
+        self.show(title: title, message: message, duration: duration, type: .Loading)
     }
     
     /**
@@ -189,8 +217,8 @@ public class AlertView: UIView {
         if titleLabel.superview == nil {
             contentView.addSubview(titleLabel)
             titleLabel.numberOfLines = 1
+            titleLabel.font = UIFont(name: boldFontName, size: titleFontSize)!
         }
-        titleLabel.font = UIFont(name: boldFontName, size: titleFontSize)!
         titleLabel.text = title
         titleLabel.frame = CGRectZero
         titleLabel.sizeToFit()
@@ -202,8 +230,8 @@ public class AlertView: UIView {
         if messageLabel.superview == nil {
             contentView.addSubview(messageLabel)
             messageLabel.numberOfLines = 0
+            messageLabel.font = UIFont(name: fontName, size: messageFontSize)!
         }
-        messageLabel.font = UIFont(name: fontName, size: messageFontSize)!
         messageLabel.text = message
         messageLabel.frame = CGRect(x: 0.0, y: 0.0, width: contentWidth, height: CGFloat.max)
         messageLabel.sizeToFit()
@@ -213,25 +241,28 @@ public class AlertView: UIView {
         var y = CGRectGetMaxY(messageLabel.frame) + contentMargin
         // TextFields
         let textFieldHeight = self.textFieldHeight
+        let textFieldFontSize = self.textFieldFontSize
         for textField in self.textFields {
             if textField.superview == nil {
                 contentView.addSubview(textField)
+                textField.borderStyle = .RoundedRect
+                textField.layer.borderColor = alertColor.CGColor
+                textField.font = UIFont(name: fontName, size: textFieldFontSize)!
                 textField.frame = CGRectZero
                 textField.frame.size = CGSize(width: contentWidth, height: textFieldHeight)
                 textField.center.x = centerX
-                // 枠線
-                textField.borderStyle = .RoundedRect
-                textField.layer.borderColor = alertColor.CGColor
             }
             textField.frame.origin.y = y
             y = CGRectGetMaxY(textField.frame) + contentMargin
         }
         // Buttons
         let buttonHeight = self.buttonHeight
+        let buttonFontSize = self.buttonFontSize
         for button in self.buttons {
             if button.superview == nil {
                 contentView.addSubview(button)
                 button.setTitleColor(UIColor.whiteColor(), forState: .Normal)
+                button.titleLabel?.font = UIFont(name: boldFontName, size: buttonFontSize)!
                 button.frame = CGRectZero
                 button.frame.size = CGSize(width: contentWidth, height: buttonHeight)
                 button.center.x = centerX
@@ -273,7 +304,7 @@ public class AlertView: UIView {
     閉じる：非表示処理
     キューに残っているものがあれば非表示後それを表示
     */
-    func close() {
+    public func close() {
         self.timer?.invalidate()
         UIView.animateWithDuration(self.duration, animations: { [unowned self] () in
             self.alpha = 0.0
@@ -314,7 +345,6 @@ public class AlertView: UIView {
             return UIColor(red: 51.0/255, green: 122.0/255, blue: 183.0/255, alpha: 1.0)
         }
     }
-    // TODO: Darken color
     
     /**
     アイコン
