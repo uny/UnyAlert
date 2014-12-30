@@ -16,13 +16,9 @@ UnyAlert
 -------------------
 
 ![Success](<https://raw.githubusercontent.com/ynagai/UnyAlert/master/UnyAlertDemo/Success.png>)
-
 ![Error](<https://raw.githubusercontent.com/ynagai/UnyAlert/master/UnyAlertDemo/Error.png>)
-
 ![Warning](<https://raw.githubusercontent.com/ynagai/UnyAlert/master/UnyAlertDemo/Warning.png>)
-
 ![Info](<https://raw.githubusercontent.com/ynagai/UnyAlert/master/UnyAlertDemo/Info.png>)
-
 ![Loading](<https://raw.githubusercontent.com/ynagai/UnyAlert/master/UnyAlertDemo/Loading.png>)
 
 フォントなどを変更できるように
