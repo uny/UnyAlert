@@ -14,17 +14,19 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.view.backgroundColor = UIColor(white: 0.2, alpha: 1.0)
+        self.view.backgroundColor = UIColor.whiteColor()
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
         
-        let view = UnyAlert.showSuccess()
-        self.view.addSubview(view)
+        let view = UnyAlert.AlertView()
+        view.showSuccess(title: "Success", message: "あああああああああああああああああああああああああああああああああああああああ")
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
 }
 
