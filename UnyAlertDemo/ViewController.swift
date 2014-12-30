@@ -58,6 +58,25 @@ class ViewController: UIViewController {
     // MARK - Events
     func success() {
         let alertView = UnyAlert.AlertView()
+        var textFields = [UITextField]()
+        let firstField = UITextField()
+        firstField.placeholder = "First"
+        textFields.append(firstField)
+        let secondField = UITextField()
+        secondField.placeholder = "Second"
+        textFields.append(secondField)
+        alertView.textFields = textFields
+        var buttons = [UIButton]()
+        let firstButton = UIButton()
+        firstButton.setTitle("First", forState: .Normal)
+        buttons.append(firstButton)
+        let secondButton = UIButton()
+        secondButton.setTitle("Second", forState: .Normal)
+        buttons.append(secondButton)
+        let thirdButton = UIButton()
+        thirdButton.setTitle("Third", forState: .Normal)
+        buttons.append(thirdButton)
+        alertView.buttons = buttons
         alertView.showSuccess(title: "成功したよ！", message: "成功やったね成功やったね成功やったね成功やったね", duration: 3.0)
     }
     func error() {

@@ -70,10 +70,16 @@ public class AlertView: UIView {
     public dynamic var titleFontSize: CGFloat = 20.0
     /// メッセージフォントサイズ
     public dynamic var messageFontSize: CGFloat = 14.0
+    /// テキストフィールド高さ
+    public dynamic var textFieldHeight: CGFloat = 30.0
+    /// ボタン高さ
+    public dynamic var buttonHeight: CGFloat = 35.0
     /// テキストフィールドたち：直接足してね
     public var textFields = [UITextField]()
     /// ボタンたち：targetなしならclose
     public var buttons = [UIButton]()
+    /// 非表示タイマー
+    var timer: NSTimer?
     
     // MARK - Showing
     /**
@@ -206,21 +212,31 @@ public class AlertView: UIView {
         /// 下端
         var y = CGRectGetMaxY(messageLabel.frame) + contentMargin
         // TextFields
+        let textFieldHeight = self.textFieldHeight
         for textField in self.textFields {
             if textField.superview == nil {
                 contentView.addSubview(textField)
+                textField.frame = CGRectZero
+                textField.frame.size = CGSize(width: contentWidth, height: textFieldHeight)
+                textField.center.x = centerX
+                // 枠線
+                textField.borderStyle = .RoundedRect
+                textField.layer.borderColor = alertColor.CGColor
             }
-            textField.center.x = centerX
             textField.frame.origin.y = y
             y = CGRectGetMaxY(textField.frame) + contentMargin
         }
         // Buttons
+        let buttonHeight = self.buttonHeight
         for button in self.buttons {
             if button.superview == nil {
                 contentView.addSubview(button)
+                button.setTitleColor(UIColor.whiteColor(), forState: .Normal)
+                button.frame = CGRectZero
+                button.frame.size = CGSize(width: contentWidth, height: buttonHeight)
+                button.center.x = centerX
             }
             button.backgroundColor = alertColor
-            button.center.x = centerX
             button.frame.origin.y = y
             y = CGRectGetMaxY(button.frame) + contentMargin
             if button.allTargets().count == 0 {
@@ -234,7 +250,8 @@ public class AlertView: UIView {
 
         if let duration = duration {
             // Durationで閉じる：多重アラートで途中で非表示になっても時間は止めない
-            NSTimer.scheduledTimerWithTimeInterval(duration, target: self, selector: "close", userInfo: nil, repeats: false)
+            self.timer = NSTimer.scheduledTimerWithTimeInterval(duration,
+                target: self, selector: "close", userInfo: nil, repeats: false)
         }
         
         self.open()
@@ -257,9 +274,11 @@ public class AlertView: UIView {
     キューに残っているものがあれば非表示後それを表示
     */
     func close() {
+        self.timer?.invalidate()
         UIView.animateWithDuration(self.duration, animations: { [unowned self] () in
             self.alpha = 0.0
         }) { [weak self] (finished) in
+            self?.removeFromSuperview()
             let alerts1 = Queue.alerts
             Queue.alerts = Queue.alerts.filter({ (alert) -> Bool in
                 return self != alert
@@ -269,7 +288,6 @@ public class AlertView: UIView {
             if let alert = Queue.alerts.last {
                 alert.open()
             }
-            self!.removeFromSuperview()
         }
     }
     
@@ -296,6 +314,7 @@ public class AlertView: UIView {
             return UIColor(red: 51.0/255, green: 122.0/255, blue: 183.0/255, alpha: 1.0)
         }
     }
+    // TODO: Darken color
     
     /**
     アイコン
