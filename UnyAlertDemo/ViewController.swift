@@ -99,7 +99,7 @@ class ViewController: UIViewController {
         let button = UIButton()
         button.setTitle("登録？", forState: .Normal)
         alertView.buttons = [button]
-        alertView.showWarning(title: "ちょっとちょっと", message: "何かを入力してください")
+        alertView.showInfo(title: "ちょっとちょっと", message: "何かを入力してください")
     }
     func loading() {
         let alertView = UnyAlert.AlertView()
