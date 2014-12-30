@@ -7,54 +7,90 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AA083D7D1A51F57C006F65A2 /* IconFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA083D7C1A51F57C006F65A2 /* IconFactory.swift */; };
-		AA3441BB1A518BDA00875178 /* UnyAlert.h in Headers */ = {isa = PBXBuildFile; fileRef = AA3441BA1A518BDA00875178 /* UnyAlert.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AA3441C11A518BDB00875178 /* UnyAlert.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA3441B51A518BDA00875178 /* UnyAlert.framework */; };
-		AA3441C81A518BDB00875178 /* UnyAlertTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3441C71A518BDB00875178 /* UnyAlertTests.swift */; };
-		AA3442031A51A61300875178 /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3442021A51A61300875178 /* AlertView.swift */; };
+		AA083D8C1A529F2F006F65A2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA083D8A1A529F2F006F65A2 /* ViewController.swift */; };
+		AA3441DC1A51935600875178 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3441DB1A51935600875178 /* AppDelegate.swift */; };
+		AA3441E31A51935600875178 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA3441E21A51935600875178 /* Images.xcassets */; };
+		AA3441E61A51935600875178 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA3441E41A51935600875178 /* LaunchScreen.xib */; };
+		AA3441F21A51935600875178 /* UnyAlertDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3441F11A51935600875178 /* UnyAlertDemoTests.swift */; };
+		AA6154351A52DBD000ADC9E8 /* UnyAlert.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = AA6154301A52DBBD00ADC9E8 /* UnyAlert.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		AA3441C21A518BDB00875178 /* PBXContainerItemProxy */ = {
+		AA3441EC1A51935600875178 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = AA3441AC1A518BDA00875178 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AA3441D61A51935600875178;
+			remoteInfo = UnyAlertDemo;
+		};
+		AA61542F1A52DBBD00ADC9E8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AA61542A1A52DBBD00ADC9E8 /* UnyAlert.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = AA3441B51A518BDA00875178;
+			remoteInfo = UnyAlert;
+		};
+		AA6154311A52DBBD00ADC9E8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AA61542A1A52DBBD00ADC9E8 /* UnyAlert.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = AA3441C01A518BDB00875178;
+			remoteInfo = UnyAlertTests;
+		};
+		AA6154331A52DBCA00ADC9E8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AA61542A1A52DBBD00ADC9E8 /* UnyAlert.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = AA3441B41A518BDA00875178;
 			remoteInfo = UnyAlert;
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		AA3441FD1A51953900875178 /* Copy Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				AA6154351A52DBD000ADC9E8 /* UnyAlert.framework in Copy Frameworks */,
+			);
+			name = "Copy Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		AA083D7C1A51F57C006F65A2 /* IconFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconFactory.swift; sourceTree = "<group>"; };
 		AA083D8A1A529F2F006F65A2 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		AA3441B51A518BDA00875178 /* UnyAlert.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UnyAlert.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA3441B91A518BDA00875178 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AA3441BA1A518BDA00875178 /* UnyAlert.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UnyAlert.h; sourceTree = "<group>"; };
-		AA3441C01A518BDB00875178 /* UnyAlertTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnyAlertTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA3441C61A518BDB00875178 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AA3441C71A518BDB00875178 /* UnyAlertTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnyAlertTests.swift; sourceTree = "<group>"; };
+		AA3441D71A51935600875178 /* UnyAlertDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UnyAlertDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA3441DA1A51935600875178 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AA3441DB1A51935600875178 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AA3441E21A51935600875178 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		AA3441E51A51935600875178 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		AA3441EB1A51935600875178 /* UnyAlertDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnyAlertDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA3441F01A51935600875178 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AA3441F11A51935600875178 /* UnyAlertDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnyAlertDemoTests.swift; sourceTree = "<group>"; };
 		AA3442021A51A61300875178 /* AlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
+		AA61542A1A52DBBD00ADC9E8 /* UnyAlert.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = UnyAlert.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		AA3441B11A518BDA00875178 /* Frameworks */ = {
+		AA3441D41A51935600875178 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AA3441BD1A518BDB00875178 /* Frameworks */ = {
+		AA3441E81A51935600875178 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AA3441C11A518BDB00875178 /* UnyAlert.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,6 +100,7 @@
 		AA3441AB1A518BDA00875178 = {
 			isa = PBXGroup;
 			children = (
+				AA61542A1A52DBBD00ADC9E8 /* UnyAlert.xcodeproj */,
 				AA3441B71A518BDA00875178 /* UnyAlert */,
 				AA3441C41A518BDB00875178 /* UnyAlertTests */,
 				AA3441D81A51935600875178 /* UnyAlertDemo */,
@@ -75,8 +112,8 @@
 		AA3441B61A518BDA00875178 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				AA3441B51A518BDA00875178 /* UnyAlert.framework */,
-				AA3441C01A518BDB00875178 /* UnyAlertTests.xctest */,
+				AA3441D71A51935600875178 /* UnyAlertDemo.app */,
+				AA3441EB1A51935600875178 /* UnyAlertDemoTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -154,54 +191,53 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		AA61542B1A52DBBD00ADC9E8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AA6154301A52DBBD00ADC9E8 /* UnyAlert.framework */,
+				AA6154321A52DBBD00ADC9E8 /* UnyAlertTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
-/* Begin PBXHeadersBuildPhase section */
-		AA3441B21A518BDA00875178 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				AA3441BB1A518BDA00875178 /* UnyAlert.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXHeadersBuildPhase section */
-
 /* Begin PBXNativeTarget section */
-		AA3441B41A518BDA00875178 /* UnyAlert */ = {
+		AA3441D61A51935600875178 /* UnyAlertDemo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AA3441CB1A518BDB00875178 /* Build configuration list for PBXNativeTarget "UnyAlert" */;
+			buildConfigurationList = AA3441F31A51935600875178 /* Build configuration list for PBXNativeTarget "UnyAlertDemo" */;
 			buildPhases = (
-				AA3441B01A518BDA00875178 /* Sources */,
-				AA3441B11A518BDA00875178 /* Frameworks */,
-				AA3441B21A518BDA00875178 /* Headers */,
-				AA3441B31A518BDA00875178 /* Resources */,
+				AA3441D31A51935600875178 /* Sources */,
+				AA3441D41A51935600875178 /* Frameworks */,
+				AA3441D51A51935600875178 /* Resources */,
+				AA3441FD1A51953900875178 /* Copy Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				AA6154341A52DBCA00ADC9E8 /* PBXTargetDependency */,
 			);
-			name = UnyAlert;
-			productName = UnyAlert;
-			productReference = AA3441B51A518BDA00875178 /* UnyAlert.framework */;
-			productType = "com.apple.product-type.framework";
+			name = UnyAlertDemo;
+			productName = UnyAlertDemo;
+			productReference = AA3441D71A51935600875178 /* UnyAlertDemo.app */;
+			productType = "com.apple.product-type.application";
 		};
-		AA3441BF1A518BDB00875178 /* UnyAlertTests */ = {
+		AA3441EA1A51935600875178 /* UnyAlertDemoTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AA3441CE1A518BDB00875178 /* Build configuration list for PBXNativeTarget "UnyAlertTests" */;
+			buildConfigurationList = AA3441F61A51935600875178 /* Build configuration list for PBXNativeTarget "UnyAlertDemoTests" */;
 			buildPhases = (
-				AA3441BC1A518BDB00875178 /* Sources */,
-				AA3441BD1A518BDB00875178 /* Frameworks */,
-				AA3441BE1A518BDB00875178 /* Resources */,
+				AA3441E71A51935600875178 /* Sources */,
+				AA3441E81A51935600875178 /* Frameworks */,
+				AA3441E91A51935600875178 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				AA3441C31A518BDB00875178 /* PBXTargetDependency */,
+				AA3441ED1A51935600875178 /* PBXTargetDependency */,
 			);
-			name = UnyAlertTests;
-			productName = UnyAlertTests;
-			productReference = AA3441C01A518BDB00875178 /* UnyAlertTests.xctest */;
+			name = UnyAlertDemoTests;
+			productName = UnyAlertDemoTests;
+			productReference = AA3441EB1A51935600875178 /* UnyAlertDemoTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -213,15 +249,16 @@
 				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = "Yuki Nagai";
 				TargetAttributes = {
-					AA3441B41A518BDA00875178 = {
+					AA3441D61A51935600875178 = {
 						CreatedOnToolsVersion = 6.1.1;
 					};
-					AA3441BF1A518BDB00875178 = {
+					AA3441EA1A51935600875178 = {
 						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = AA3441D61A51935600875178;
 					};
 				};
 			};
-			buildConfigurationList = AA3441AF1A518BDA00875178 /* Build configuration list for PBXProject "UnyAlert" */;
+			buildConfigurationList = AA3441AF1A518BDA00875178 /* Build configuration list for PBXProject "UnyAlertDemo" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -232,23 +269,48 @@
 			mainGroup = AA3441AB1A518BDA00875178;
 			productRefGroup = AA3441B61A518BDA00875178 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = AA61542B1A52DBBD00ADC9E8 /* Products */;
+					ProjectRef = AA61542A1A52DBBD00ADC9E8 /* UnyAlert.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
-				AA3441B41A518BDA00875178 /* UnyAlert */,
-				AA3441BF1A518BDB00875178 /* UnyAlertTests */,
+				AA3441D61A51935600875178 /* UnyAlertDemo */,
+				AA3441EA1A51935600875178 /* UnyAlertDemoTests */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXReferenceProxy section */
+		AA6154301A52DBBD00ADC9E8 /* UnyAlert.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = UnyAlert.framework;
+			remoteRef = AA61542F1A52DBBD00ADC9E8 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		AA6154321A52DBBD00ADC9E8 /* UnyAlertTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = UnyAlertTests.xctest;
+			remoteRef = AA6154311A52DBBD00ADC9E8 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
 /* Begin PBXResourcesBuildPhase section */
-		AA3441B31A518BDA00875178 /* Resources */ = {
+		AA3441D51A51935600875178 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA3441E61A51935600875178 /* LaunchScreen.xib in Resources */,
+				AA3441E31A51935600875178 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AA3441BE1A518BDB00875178 /* Resources */ = {
+		AA3441E91A51935600875178 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -258,30 +320,35 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		AA3441B01A518BDA00875178 /* Sources */ = {
+		AA3441D31A51935600875178 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AA083D7D1A51F57C006F65A2 /* IconFactory.swift in Sources */,
-				AA3442031A51A61300875178 /* AlertView.swift in Sources */,
+				AA083D8C1A529F2F006F65A2 /* ViewController.swift in Sources */,
+				AA3441DC1A51935600875178 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AA3441BC1A518BDB00875178 /* Sources */ = {
+		AA3441E71A51935600875178 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AA3441C81A518BDB00875178 /* UnyAlertTests.swift in Sources */,
+				AA3441F21A51935600875178 /* UnyAlertDemoTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		AA3441C31A518BDB00875178 /* PBXTargetDependency */ = {
+		AA3441ED1A51935600875178 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = AA3441B41A518BDA00875178 /* UnyAlert */;
-			targetProxy = AA3441C21A518BDB00875178 /* PBXContainerItemProxy */;
+			target = AA3441D61A51935600875178 /* UnyAlertDemo */;
+			targetProxy = AA3441EC1A51935600875178 /* PBXContainerItemProxy */;
+		};
+		AA6154341A52DBCA00ADC9E8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = UnyAlert;
+			targetProxy = AA6154331A52DBCA00ADC9E8 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -382,44 +449,36 @@
 			};
 			name = Release;
 		};
-		AA3441CC1A518BDB00875178 /* Debug */ = {
+		AA3441F41A51935600875178 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = UnyAlert/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = UnyAlertDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
-		AA3441CD1A518BDB00875178 /* Release */ = {
+		AA3441F51A51935600875178 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = UnyAlert/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = UnyAlertDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
 			};
 			name = Release;
 		};
-		AA3441CF1A518BDB00875178 /* Debug */ = {
+		AA3441F71A51935600875178 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -428,29 +487,32 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = UnyAlertTests/Info.plist;
+				INFOPLIST_FILE = UnyAlertDemoTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/UnyAlertDemo.app/UnyAlertDemo";
 			};
 			name = Debug;
 		};
-		AA3441D01A518BDB00875178 /* Release */ = {
+		AA3441F81A51935600875178 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = UnyAlertTests/Info.plist;
+				INFOPLIST_FILE = UnyAlertDemoTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/UnyAlertDemo.app/UnyAlertDemo";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		AA3441AF1A518BDA00875178 /* Build configuration list for PBXProject "UnyAlert" */ = {
+		AA3441AF1A518BDA00875178 /* Build configuration list for PBXProject "UnyAlertDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AA3441C91A518BDB00875178 /* Debug */,
@@ -459,20 +521,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AA3441CB1A518BDB00875178 /* Build configuration list for PBXNativeTarget "UnyAlert" */ = {
+		AA3441F31A51935600875178 /* Build configuration list for PBXNativeTarget "UnyAlertDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				AA3441CC1A518BDB00875178 /* Debug */,
-				AA3441CD1A518BDB00875178 /* Release */,
+				AA3441F41A51935600875178 /* Debug */,
+				AA3441F51A51935600875178 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AA3441CE1A518BDB00875178 /* Build configuration list for PBXNativeTarget "UnyAlertTests" */ = {
+		AA3441F61A51935600875178 /* Build configuration list for PBXNativeTarget "UnyAlertDemoTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				AA3441CF1A518BDB00875178 /* Debug */,
-				AA3441D01A518BDB00875178 /* Release */,
+				AA3441F71A51935600875178 /* Debug */,
+				AA3441F81A51935600875178 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
