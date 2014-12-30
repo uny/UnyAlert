@@ -8,6 +8,9 @@
 
 import UIKit
 
+/**
+UIView - drawRectだと描画処理分コスト高そうなので素直にUIImageで生成
+*/
 class IconFactory {
     /// アイコン種類
     enum IconType: Int {

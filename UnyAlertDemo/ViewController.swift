@@ -1,32 +1,35 @@
 //
 //  ViewController.swift
-//  UnyAlertDemo
+//  UnyAlert
 //
-//  Created by Yuki Nagai on 12/29/14.
+//  Created by Yuki Nagai on 12/30/14.
 //  Copyright (c) 2014 Yuki Nagai. All rights reserved.
 //
 
 import UIKit
-import UnyAlert
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.view.backgroundColor = UIColor.whiteColor()
-    }
-    
-    override func viewDidAppear(animated: Bool) {
-        super.viewDidAppear(animated)
-        
-        let view = UnyAlert.AlertView()
-        view.showSuccess(title: "Success", message: "あああああああああああああああああああああああああああああああああああああああ")
+
+        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-}
+    
 
+    /*
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+    }
+    */
+
+}
