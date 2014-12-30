@@ -8,8 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		AA083D7D1A51F57C006F65A2 /* IconFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA083D7C1A51F57C006F65A2 /* IconFactory.swift */; };
-		AA083D841A529570006F65A2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA083D821A529570006F65A2 /* ViewController.swift */; };
-		AA083D851A529570006F65A2 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA083D831A529570006F65A2 /* ViewController.xib */; };
+		AA083D8C1A529F2F006F65A2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA083D8A1A529F2F006F65A2 /* ViewController.swift */; };
 		AA3441BB1A518BDA00875178 /* UnyAlert.h in Headers */ = {isa = PBXBuildFile; fileRef = AA3441BA1A518BDA00875178 /* UnyAlert.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AA3441C11A518BDB00875178 /* UnyAlert.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA3441B51A518BDA00875178 /* UnyAlert.framework */; };
 		AA3441C81A518BDB00875178 /* UnyAlertTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3441C71A518BDB00875178 /* UnyAlertTests.swift */; };
@@ -62,8 +61,7 @@
 
 /* Begin PBXFileReference section */
 		AA083D7C1A51F57C006F65A2 /* IconFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconFactory.swift; sourceTree = "<group>"; };
-		AA083D821A529570006F65A2 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		AA083D831A529570006F65A2 /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
+		AA083D8A1A529F2F006F65A2 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		AA3441B51A518BDA00875178 /* UnyAlert.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UnyAlert.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA3441B91A518BDA00875178 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AA3441BA1A518BDA00875178 /* UnyAlert.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UnyAlert.h; sourceTree = "<group>"; };
@@ -181,8 +179,7 @@
 				AA3441E21A51935600875178 /* Images.xcassets */,
 				AA3441E41A51935600875178 /* LaunchScreen.xib */,
 				AA3441D91A51935600875178 /* Supporting Files */,
-				AA083D821A529570006F65A2 /* ViewController.swift */,
-				AA083D831A529570006F65A2 /* ViewController.xib */,
+				AA083D8A1A529F2F006F65A2 /* ViewController.swift */,
 			);
 			path = UnyAlertDemo;
 			sourceTree = "<group>";
@@ -364,7 +361,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA3441E61A51935600875178 /* LaunchScreen.xib in Resources */,
-				AA083D851A529570006F65A2 /* ViewController.xib in Resources */,
 				AA3441E31A51935600875178 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -401,7 +397,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AA083D841A529570006F65A2 /* ViewController.swift in Sources */,
+				AA083D8C1A529F2F006F65A2 /* ViewController.swift in Sources */,
 				AA3441DC1A51935600875178 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -259,15 +259,17 @@ public class AlertView: UIView {
     func close() {
         UIView.animateWithDuration(self.duration, animations: { [unowned self] () in
             self.alpha = 0.0
-        }) { [unowned self] (finished) in
-            self.removeFromSuperview()
+        }) { [weak self] (finished) in
+            let alerts1 = Queue.alerts
             Queue.alerts = Queue.alerts.filter({ (alert) -> Bool in
                 return self != alert
             })
+            let alerts2 = Queue.alerts
             // キューにもし何かあれば再表示
             if let alert = Queue.alerts.last {
                 alert.open()
             }
+            self!.removeFromSuperview()
         }
     }
     
