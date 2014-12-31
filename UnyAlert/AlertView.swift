@@ -83,7 +83,7 @@ public class AlertView: UIView {
     public dynamic var progressHeight: CGFloat = 3.0
     /// テキストフィールドたち：直接足してね
     public var textFields = [UITextField]()
-    /// ボタンたち：targetなしならclose
+    /// ボタンたち：押されたらclose
     public var buttons = [UIButton]()
     /// プログレス（0.0 - 1.0 or nil）
     public var progress: CGFloat? = nil {
@@ -289,10 +289,8 @@ public class AlertView: UIView {
             button.backgroundColor = alertColor
             button.frame.origin.y = y
             y = CGRectGetMaxY(button.frame) + contentMargin
-            if button.allTargets().count == 0 {
-                // Targetが何も設定されていなければ閉じる
-                button.addTarget(self, action: "close", forControlEvents: .TouchUpInside)
-            }
+            // ボタンを押したけれどアラート閉じないなんてことはないはず
+            button.addTarget(self, action: "close", forControlEvents: .TouchUpInside)
         }
         // Progress bar領域確保：進捗管理はdidSet
         let progressView = self.progressView
