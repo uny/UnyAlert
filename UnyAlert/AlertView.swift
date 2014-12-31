@@ -42,7 +42,8 @@ public class AlertView: UIView {
     let titleLabel = UILabel()
     /// 詳細メッセージ
     let messageLabel = UILabel()
-
+    /// プログレスバー
+    let progressView = UIView()
     /*
     変数たち
     共通で変更したい場合はUIAppearance経由で
@@ -78,10 +79,27 @@ public class AlertView: UIView {
     public dynamic var buttonHeight: CGFloat = 35.0
     /// ボタンフォントサイズ
     public dynamic var buttonFontSize: CGFloat = 14.0
+    /// プログレスバー高さ
+    public dynamic var progressHeight: CGFloat = 3.0
     /// テキストフィールドたち：直接足してね
     public var textFields = [UITextField]()
     /// ボタンたち：targetなしならclose
     public var buttons = [UIButton]()
+    /// プログレス（0.0 - 1.0 or nil）
+    public var progress: CGFloat? = nil {
+        didSet {
+            // プログレス更新
+            let progressView = self.progressView
+            if let progress = self.progress {
+                if progressView.superview != nil {
+                    // 更新
+                    let alertWidth = CGRectGetWidth(self.contentView.frame)
+                    progressView.frame.size.width = floor(alertWidth * progress)
+                }
+            }
+            // それ以外は画面全更新するはず：画面新規作成・プログレス不要時
+        }
+    }
     /// 非表示タイマー
     var timer: NSTimer?
     
@@ -275,10 +293,28 @@ public class AlertView: UIView {
                 button.addTarget(self, action: "close", forControlEvents: .TouchUpInside)
             }
         }
+        // Progress bar領域確保：進捗管理はdidSet
+        let progressView = self.progressView
+        if let progress = self.progress {
+            // プログレス必要
+            if progressView.superview == nil {
+                let progressHeight = self.progressHeight
+                contentView.addSubview(progressView)
+                progressView.frame = CGRect(x: 0.0, y: y, width: alertWidth * progress, height: progressHeight)
+                // 色は成功色
+                progressView.backgroundColor = self.alertColor(.Success)
+                y = CGRectGetMaxY(progressView.frame)
+            }
+        } else {
+            // プログレス不要論
+            if progressView.superview != nil {
+                progressView.removeFromSuperview()
+            }
+        }
         // Content view height
         contentView.frame.size.height = y
         contentView.center.y = self.center.y
-
+        
         if let duration = duration {
             // Durationで閉じる：多重アラートで途中で非表示になっても時間は止めない
             self.timer = NSTimer.scheduledTimerWithTimeInterval(duration,
@@ -308,17 +344,17 @@ public class AlertView: UIView {
         self.timer?.invalidate()
         UIView.animateWithDuration(self.duration, animations: { [unowned self] () in
             self.alpha = 0.0
-        }) { [weak self] (finished) in
-            self?.removeFromSuperview()
-            let alerts1 = Queue.alerts
-            Queue.alerts = Queue.alerts.filter({ (alert) -> Bool in
-                return self != alert
-            })
-            let alerts2 = Queue.alerts
-            // キューにもし何かあれば再表示
-            if let alert = Queue.alerts.last {
-                alert.open()
-            }
+            }) { [weak self] (finished) in
+                self?.removeFromSuperview()
+                let alerts1 = Queue.alerts
+                Queue.alerts = Queue.alerts.filter({ (alert) -> Bool in
+                    return self != alert
+                })
+                let alerts2 = Queue.alerts
+                // キューにもし何かあれば再表示
+                if let alert = Queue.alerts.last {
+                    alert.open()
+                }
         }
     }
     

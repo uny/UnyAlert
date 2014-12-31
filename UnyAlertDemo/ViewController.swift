@@ -17,6 +17,8 @@ class ViewController: UIViewController {
     let infoButton = UIButton()
     let loadingButton = UIButton()
     
+    var count = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -106,9 +108,11 @@ class ViewController: UIViewController {
     }
     func loading() {
         let alertView = UnyAlert.AlertView()
+        // プログレスを表示するときは表示前に初期化
+        alertView.progress = 0.0
         alertView.showLoading(title: "通信中？", message: "いえええええい")
-        NSTimer.scheduledTimerWithTimeInterval(3.0,
-            target: self, selector: "timeup:", userInfo: ["alertView": alertView], repeats: false)
+        NSTimer.scheduledTimerWithTimeInterval(0.1,
+            target: self, selector: "count:", userInfo: ["alertView": alertView], repeats: true)
     }
     
     // MARK - Button events
@@ -116,8 +120,17 @@ class ViewController: UIViewController {
         println("Tapped by \(sender)")
     }
     // MARK - Timer events
-    func timeup(timer: NSTimer) {
+    func count(timer: NSTimer) {
+        let duration = 100
         let alertView = timer.userInfo!["alertView"] as UnyAlert.AlertView
-        alertView.close()
+        if self.count < duration {
+            // 更新
+            alertView.progress = CGFloat(self.count) / CGFloat(duration)
+            self.count += 1
+        } else {
+            self.count = 0
+            timer.invalidate()
+            alertView.close()
+        }
     }
 }
