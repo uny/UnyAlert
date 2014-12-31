@@ -88,6 +88,7 @@ public class AlertView: UIView {
     /// プログレス（0.0 - 1.0 or nil）
     public var progress: CGFloat? = nil {
         didSet {
+            // TODO: この辺もう少し綺麗にできたら良いね
             // プログレス更新
             let progressView = self.progressView
             if let progress = self.progress {
