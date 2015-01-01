@@ -88,7 +88,7 @@ public class AlertView: UIView {
     public var textFields = [UITextField]()
     /// ボタンたち：押されたらclose
     public var buttons = [UIButton]()
-    /// プログレス（0.0 - 1.0 or nil）
+    /// プログレス（0.0 - 1.0 or nil）：メインスレッドで更新してね
     public var progress: Float? = nil {
         didSet {
             // プログレス更新
