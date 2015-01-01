@@ -43,7 +43,7 @@ public class AlertView: UIView {
     /// 詳細メッセージ
     let messageLabel = UILabel()
     /// プログレスバー
-    let progressView = UIView()
+    let progressView = UIProgressView()
     /*
     変数たち
     共通で変更したい場合はUIAppearance経由で
@@ -79,23 +79,19 @@ public class AlertView: UIView {
     public dynamic var buttonHeight: CGFloat = 35.0
     /// ボタンフォントサイズ
     public dynamic var buttonFontSize: CGFloat = 14.0
-    /// プログレスバー高さ
-    public dynamic var progressHeight: CGFloat = 3.0
     /// テキストフィールドたち：直接足してね
     public var textFields = [UITextField]()
     /// ボタンたち：押されたらclose
     public var buttons = [UIButton]()
     /// プログレス（0.0 - 1.0 or nil）
-    public var progress: CGFloat? = nil {
+    public var progress: Float? = nil {
         didSet {
-            // TODO: この辺もう少し綺麗にできたら良いね
             // プログレス更新
             let progressView = self.progressView
             if let progress = self.progress {
                 if progressView.superview != nil {
                     // 更新
-                    let alertWidth = CGRectGetWidth(self.contentView.frame)
-                    progressView.frame.size.width = floor(alertWidth * progress)
+                    progressView.setProgress(progress, animated: true)
                 }
             }
             // それ以外は画面全更新するはず：画面新規作成・プログレス不要時
@@ -297,11 +293,11 @@ public class AlertView: UIView {
         if let progress = self.progress {
             // プログレス必要
             if progressView.superview == nil {
-                let progressHeight = self.progressHeight
                 contentView.addSubview(progressView)
-                progressView.frame = CGRect(x: 0.0, y: y, width: alertWidth * progress, height: progressHeight)
-                // 色は成功色
-                progressView.backgroundColor = self.alertColor(.Success)
+                progressView.setProgress(progress, animated: false)
+                progressView.frame.size.width = alertWidth
+                progressView.center.x = floor(alertWidth / 2)
+                progressView.frame.origin.y = y
                 y = CGRectGetMaxY(progressView.frame)
             }
         } else {

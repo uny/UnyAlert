@@ -105,6 +105,8 @@ class ViewController: UIViewController {
         button.setTitle("登録？", forState: .Normal)
         alertView.buttons = [button]
         alertView.showInfo(title: "ちょっとちょっと", message: "何かを入力してください")
+        NSTimer.scheduledTimerWithTimeInterval(3.0,
+            target: self, selector: "stack:", userInfo: ["alertView": alertView], repeats: false)
     }
     func loading() {
         let alertView = UnyAlert.AlertView()
@@ -120,17 +122,27 @@ class ViewController: UIViewController {
         println("Tapped by \(sender)")
     }
     // MARK - Timer events
+    /**
+    プログレス
+    */
     func count(timer: NSTimer) {
         let duration = 100
         let alertView = timer.userInfo!["alertView"] as UnyAlert.AlertView
         if self.count < duration {
             // 更新
-            alertView.progress = CGFloat(self.count) / CGFloat(duration)
+            alertView.progress = Float(self.count) / Float(duration)
             self.count += 1
         } else {
             self.count = 0
             timer.invalidate()
             alertView.close()
         }
+    }
+    /**
+    アラート積み重ね：キュー挙動確認
+    */
+    func stack(timer: NSTimer) {
+        let alertView = UnyAlert.AlertView()
+        alertView.showWarning(title: "早く早く！", message: "キューの確認です", duration: 3.0)
     }
 }
