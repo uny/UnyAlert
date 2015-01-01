@@ -44,6 +44,11 @@ public class AlertView: UIView {
     let messageLabel = UILabel()
     /// プログレスバー
     let progressView = UIProgressView()
+    
+    // 定数たち
+    /// コンテンツ載せるビュー背景色
+    let contentViewColor = UIColor.whiteColor()
+    
     /*
     変数たち
     共通で変更したい場合はUIAppearance経由で
@@ -160,9 +165,10 @@ public class AlertView: UIView {
         self.hidden = true
         // Content view
         let contentView = self.contentView
+        let contentViewColor = self.contentViewColor
         if contentView.superview == nil {
             self.addSubview(contentView)
-            contentView.backgroundColor = UIColor.whiteColor()
+            contentView.backgroundColor = contentViewColor
             // 高さは全部載せ終わってから
             let width = CGRectGetWidth(self.frame)
             contentView.frame.size.width = width - (self.alertMargin * 2.0)
@@ -294,6 +300,7 @@ public class AlertView: UIView {
             // プログレス必要
             if progressView.superview == nil {
                 contentView.addSubview(progressView)
+                progressView.trackTintColor = contentViewColor
                 progressView.setProgress(progress, animated: false)
                 progressView.frame.size.width = alertWidth
                 progressView.center.x = floor(alertWidth / 2)
